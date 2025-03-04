@@ -1,0 +1,12 @@
+{
+  "name": "@lume-ui/tailwind",
+  "version": "1.0.0",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.9",
+    "postcss": "^8.5.3",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.0.9"
+  }
+}

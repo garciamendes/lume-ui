@@ -1,0 +1,4 @@
+{
+  "extends": "@lume-ui/tsconfig/react.json",
+  "include": ["src"],
+}
