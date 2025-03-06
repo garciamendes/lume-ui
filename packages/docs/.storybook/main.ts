@@ -7,8 +7,8 @@ import { join, dirname } from "path";
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, "package.json")));
+function getAbsolutePath(value: string) {
+  return dirname(new URL(import.meta.resolve(join(value, "package.json")), import.meta.url).pathname);
 }
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -17,7 +17,7 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@chromatic-com/storybook"),
     getAbsolutePath("@storybook/experimental-addon-test"),
-    getAbsolutePath("@storybook/addon-styling-webpack")
+    getAbsolutePath("@storybook/addon-styling-webpack"),
   ],
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),

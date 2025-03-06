@@ -8,6 +8,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@storybook/addon-postcss": "^2.0.0",
     "turbo": "^2.4.4"
   },
   "packageManager": "npm@8.5.0"
